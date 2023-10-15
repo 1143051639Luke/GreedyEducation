@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font1 -->
+    <!-- font-family: 'ZCOOL KuaiLe', sans-serif; 中文的-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <!-- font2 -->
+    <!-- font-family: 'Bungee Spice', sans-serif; 橙色的-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <!-- font3 -->
+    <!-- font-family: 'Foldit', sans-serif; 灰色的-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Foldit&display=swap" rel="stylesheet">
+    <!-- font4 -->
+    <!-- font-family: 'Montserrat', sans-serif; 专业的 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;700&display=swap" rel="stylesheet">
+    <!-- font5 -->
+    <!-- font-family: 'Handjet', sans-serif; at the end -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap" rel="stylesheet">
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .videoContainer {
+        position: relative;
+        width: 100%;
+    }
+    #video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    #videoText{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 500%;
+        z-index: 1;
+        letter-spacing: 2.5px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+    }
+    #horizontalLine1 {
+        border-width: 0.9px;
+        width: 100%;
+        color:rgba(255, 255, 255, 0.5);
+        border-style:solid;
+    }
+    .nav {
+        background-color: rgba(0, 0, 0, 0.35);
+        position:absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .nav ul {
+        list-style: none;
+        padding: 10px;
+        margin: 0px;
+        display:inline-block;
+    }
+    .nav li {
+        display: inline;
+    }
+    .nav #navLogo {
+        float: left;
+    }
+    .nav #navLeft li {
+        padding-left: 30px;
+    }
+    .nav #navRight {
+        float: right;
+        margin-right: 5px;
+    }
+    .nav a {
+        color:rgba(245, 245, 245, 0.8);
+        text-decoration: none;
+    }
+    .nav #navLeft {
+        font-size: 150%;
+        margin-top: 15px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+    .nav a:hover {
+        color:rgba(245, 245, 245, 1);
+        text-decoration:overline;
+    }
+    .nav #navRight a:hover {
+        color:rgba(245, 245, 245, 1);
+        text-decoration:underline;
+    }
+
+
+    .contactUs {
+        /* width: 80vw; */
+        height: auto;
+        margin: auto;
+        margin-top: 2.5vw;
+        background-color: rgba(135, 218, 219, 0.6);
+    }
+
+    .text {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-top:2%;
+        padding-bottom: 2%;
+    }
+    .text p {
+        letter-spacing: 1px;
+        font-weight: 450;
+    }
+    
+    .text #title{
+        font-size: 200%;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 1%;
+        font-weight:500;
+    }
+    .contactUs #content {
+        font-size: larger;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    #horizontalLine2 {
+        margin-top: 3.5%;
+        border-width: 1px;
+        width: 100%;
+        color:rgb(0, 0, 0);
+        border-style:solid;
+        margin-bottom: 0;
+    }
+    .businessIntroductionDiv {
+        margin-top: 2.5%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #businessIntroductionSpan {  
+        background-color: rgba(161, 215, 216, 0);
+        /* border: 2px solid rgba(0, 0, 0, 0); */
+        border-radius: 10px;
+        font-size: 135%;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #horizontalLine3 {
+        margin: 0;
+        border-width: 1.5px;
+        width: 100%;
+        color:rgba(0, 0, 0, 0.5);
+        border-style:solid;
+        margin-bottom: 0;
+    }
+
+    .businessBlock hr {
+        border-style: none;
+    }
+    .businessBlock {
+        margin-top: 2%;
+        border-top: 10px solid rgb(255, 255, 255);
+        border-bottom: 10px solid rgb(255, 255, 255);
+        background-color: rgba(63, 208, 211, 0.3);
+        letter-spacing: 1px;
+        font-size: 150%;
+    }
+    .businessBlock h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight:400;
+        font-size: 120%;
+    }    
+
+    .businessBlock p {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: smaller;
+        letter-spacing: 0px;
+        font-weight: 400;
+        line-height: 140%;
+        padding: 1%;
+    }
+
+    .block1 {
+        margin-top: 2%;
+        border-left: 15px solid;
+        background-color: rgba(135, 218, 219, 0.35);
+        border-radius: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .block1 p {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .block1 h1 {
+        /* text-align: center; */
+        margin-bottom: 0;
+        margin-left: 4.5%;
+
+    }
+
+    .block2 {
+        margin-top: 3%;
+        border-left: 15px solid;
+        background-color: rgba(135, 218, 219, 0.35);        /* border: 1px solid black; */
+        border-radius: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .block2 h1 {
+        /* text-align: center; */
+        margin-bottom: 0;
+        margin-left: 4.5%;
+    }
+    .block2 p {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .block3 {
+        margin-top: 3%;
+        border-left: 15px solid;
+        background-color: rgba(135, 218, 219, 0.35);        /* border: 1px solid black; */
+        border-radius: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .block3 h1 {
+        /* text-align: center; */
+        margin-bottom: 0;
+        margin-left: 4.5%;
+    }
+    .block3 p {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .block4 {
+        margin-top: 3%;
+        border-left: 15px solid;
+        margin-bottom: 2%;
+        background-color: rgba(135, 218, 219, 0.35);        /* border: 1px solid black; */
+        border-radius: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .block4 h1 {
+        /* text-align: center; */
+        margin-bottom: 0;
+        margin-left: 4.5%;
+    }
+    .block4 p {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #star1, #star2, #star3, #star4 {
+        font-size: 65%;
+    }
+
+    #end {
+        color: rgb(0, 169, 185);        /* border: 1px solid black; */
+        text-align: center;
+        font-family: 'Handjet', sans-serif;        letter-spacing: 2px;
+        font-size: 35px;
+    }
+
+
+    .links {
+        /* border-top: 4px solid red; */
+        /* position: relative; */
+        margin-bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-color: rgba(0, 0, 0, 0.751);
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        font-size: larger;
+    }
+
+    .links #logoB {
+    margin-left: 3%;
+    margin-right: 0;
+    }
+    .links #space1 {
+        border-right: 2px solid rgb(92, 88, 88);
+        margin-left: 15px;
+    }
+    .links #space2 {
+        margin-right: 15px;
+    }
+    .links a{
+        margin: 1%;
+        text-decoration: none;
+        font-size: 110%;
+        color: rgba(245, 245, 245, 0.6);
+    }
+    .links #link1 {
+        margin-left: 0;
+    }
+    .links a:hover {
+        color: rgba(245, 245, 245, 1);
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+
+
+<body>
+
+<!-- first part-->
+
+    <div class="videoContainer">
+        <video autoplay muted loop id="video">
+            <source src="Video.mp4" type="video/mp4">
+        </video>
+        <div id="videoText">
+            LEARN GREEDILY FOR A BETTER YOU
+        </div>
+    </div>
+
+    <!-- <h1 id="space1">&ensp;</h1> -->
+    <div class="nav">
+        <ul id="navLogo">
+            <img src="Logo.png", width="150">
+        </ul>
+        <ul id="navLeft">
+            <li> <a href="https://forms.gle/RVjnAgXudDr74mWz8" target="_blank">Enrollment</a> </li> 
+            <li> <a href="https://forms.gle/qFm9dKrGgtfJ8YSY9" target="_blank">Contact us</a> </li>
+        </ul>
+
+        <ul id="navRight">
+            <!-- <li><a href="#">English</a></li> -->
+            <li><a href="index.html">Chinese</a></li>
+        </ul>
+    <!-- <hr id="horizontalLine1"></hr> -->
+    </div>
+
+<!-- second part-->
+    <div class="contactUs">
+
+        <div class="text">
+            <p id="title">About us</p>
+            <p id="content">Greedy Education is an organization established by 
+                UBC students, focusing on providing training and support to 
+                high school students in Vancouver. Greedy Education also serves 
+                as a community dedicated to sharing insights and experiences 
+                related to studying abroad. Joining us means connecting with 
+                alumni from various majors at UBC. As seasoned upperclassmen 
+                and upperclasswomen, we are here to offer assistance and 
+                guidance to help you navigate any challenges or uncertainties 
+                you may encounter during your study abroad journey.
+
+
+
+
+            </p>
+        </div>
+    </div>
+
+    <!-- <hr id="horizontalLine2"></hr> -->
+<!-- third part-->
+
+    <!-- <div class="businessIntroductionDiv">
+        <span id="businessIntroductionSpan">Business Introduction</span>
+    </div> -->
+    <!-- <hr id="horizontalLine3"></hr> -->
+
+
+    <div class="businessBlock">
+        <div class="businessIntroductionDiv">
+            <span id="businessIntroductionSpan">Business Introduction</span>
+        </div>
+        <div class="block1">
+            <h1 id="b1Title">&ensp;High School</h1>
+            <p>Greedy Education offers courses and tutoring in all high school subjects, 
+                including AP (Advanced Placement). We understand that the academic pressure 
+                 college admissions in Vancouver is increasing every year. Our teachers not 
+                 only provide academic support to help students excel in 
+                their studies but also offer free consultations and assistance to 
+                students who are in the college application process.</p>
+            <hr>
+            <p id="star1">*To ensure educational outcomes, we will provide personalized instruction for each student. All teaching will be presented in a one-on-one format.</p>
+            <hr>
+        </div>
+        <div class="block2">
+            <h1 id="b2Title">&ensp;Pre-Univeristy</h1>
+            <p>Greedy Education provides college-level courses and tutoring for first-year college students. 
+                By gaining a head start in college-level knowledge, students can delve deeper 
+                into their areas of interest and gain clarity about their academic direction in college.</p>
+            <hr>
+            <p id="star2">*To ensure educational outcomes, we will provide personalized instruction for each student. All teaching will be presented in a one-on-one format.</p>
+            <hr>
+        </div>
+        <div class="block3">
+            <h1 id="b3Title">&ensp;More</h1>
+            <p>Greedy Education can not only assist you academically but also provide support throughout your study abroad journey!
+            <hr>
+                <p>-&ensp;Visas: Tourist, student, and expedited U.S. visa appointments (as fast as 10 days).</p>
+            <p>-&ensp;Skills: Piano instruction and accompaniment, professional badminton coaching.            </p>
+            <p>-&ensp;Other: SIN Number assistance, MSP (Medical Services Plan) guidance (free of charge for members).</p>
+            <hr>
+            <p id="star3">*For further details on our multiple services, please inquire.</p>
+            <hr>
+        </div>
+        <div class="block4">
+            <h1 id="b4Title">&ensp;Price&Location</h1>
+            <p>-&ensp;Price:45$/hour</p>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;-&ensp;Limited time offer:35$/hour</p>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;-&ensp;Free trial lesson</p>
+            <hr>
+            <p>-&ensp;Location:UBC Vancouver Campus/Zoom</p>
+            <p>-&ensp;Home tutoring: Please inquire for more details.            </p>
+            <hr>
+            <p id="star4">*For more detailed pricing information, please consult with us.</p>
+            <hr>
+        </div>
+    </div>
+
+<!-- forth part-->
+    <!-- <div class="PriceContainer">
+        <h1 id="Price">Price</h1>
+
+
+        <Pblock1></Pblock1>
+    </div> -->
+
+    <h1 id="end">Fell Free to contact us!</h1>
+    <!-- <hr id="horizontalLine3"> -->
+
+    <div class="links"> 
+        <img id="logoB", src="Logo.png", width="150">
+        <h1 id="space1">&ensp;</h1>
+        <h1 id="space2">&ensp;</h1>
+        <a href="https://forms.gle/RVjnAgXudDr74mWz8" target="_blank" id="link1">Enrollment</a>
+        <a href="https://forms.gle/qFm9dKrGgtfJ8YSY9" target="_blank">Contact us</a>
+    </div>
+</body>
+</html>
